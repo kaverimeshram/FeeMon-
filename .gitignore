@@ -43,3 +43,4 @@ backend/data/*.json
 *.sln
 *.sw?
 
+.vercel
