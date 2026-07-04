@@ -43,16 +43,24 @@ const startServer = async () => {
     ]);
 
     // CORS Setup
+    const isAllowedOrigin = (origin) => {
+      if (!origin) return true;
+      if (allowedOrigins.has(origin)) return true;
+      // Allow Vercel deployments
+      if (origin.endsWith('.vercel.app')) return true;
+      return false;
+    };
+
     app.use(
       cors({
         origin: (origin, callback) => {
-          callback(null, !origin || allowedOrigins.has(origin));
+          callback(null, isAllowedOrigin(origin));
         },
         methods: ['GET', 'POST', 'OPTIONS'],
         allowedHeaders: ['Content-Type', 'Authorization', 'X-402-Payment', 'X-PAYMENT'],
       })
     );
-    app.options('*any', cors()); // handle preflight
+    app.options('*', cors()); // handle preflight
 
     app.use(express.json());
 
