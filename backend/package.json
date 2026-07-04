@@ -1,0 +1,19 @@
+{
+  "name": "feemon-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "lowdb": "^7.0.0",
+    "node-cron": "latest",
+    "viem": "latest",
+    "x402-express": "latest"
+  }
+}
