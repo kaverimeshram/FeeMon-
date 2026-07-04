@@ -13,11 +13,13 @@
     "register-validator": "node scripts/registerValidator.js"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
     "katex": "^0.17.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1",
-    "viem": "^2.54.1"
+    "viem": "^2.54.1",
+    "vite": "^8.1.1"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
@@ -31,7 +33,6 @@
     "@types/mocha": "^10.0.10",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.3",
     "chai": "^4.5.0",
     "dotenv": "^17.4.2",
     "ethers": "^6.17.0",
@@ -41,7 +42,6 @@
     "solidity-coverage": "^0.8.17",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.2",
-    "typescript": "^6.0.3",
-    "vite": "^8.1.1"
+    "typescript": "^6.0.3"
   }
 }
